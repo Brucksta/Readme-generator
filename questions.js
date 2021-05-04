@@ -21,16 +21,11 @@ ${answers.contribution}
 How to test:
 ${answers.testing}
 
-Github link: https://github.com/${githubName}
+Github link: https://github.com/${answers.githubName}
 Contact info: ${answers.email}
 `;
 
 inquirer.prompt([
-      {
-        type: 'input',
-        name: 'githubName',
-        message: 'What is your Github name?',
-      },
       {
         type: 'input',
         name: 'email',
@@ -66,12 +61,23 @@ inquirer.prompt([
         name: 'testing',
         message: 'How can people test your application?',
       },
+      {
+        type: 'list',
+        name: 'licence',
+        message: 'What licence would you like to use?',
+        choices: [{name: 'MIT', value: ''}, {name: 'afl-3.0', value: ''}, {name: 'apache-2.0', value: ''}]
+      },
+      {
+        type: 'input',
+        name: 'githubName',
+        message: 'What is your Github name?',
+      },
     ])
     .then((answers) => {
    const readMeContent = generateReadMe(answers);
 
       fs.writeFile('README.md', readMeContent, (err) =>
-        err ? console.log(err) : console.log('Successfully created index.html!')
+        err ? console.log(err) : console.log('Successfully created readme.html!')
       );
     });
 
