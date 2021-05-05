@@ -4,28 +4,40 @@ const { title } = require('process');
 const { info } = require('console');
 
 const generateReadMe = (answers) =>
-`${answers.title}
+`## ${answers.title}
 
-Description:
+## Tables of contents:
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How to Contribute](#how-to-contribute)
+- [Testing](#how-to-test)
+- [Questions](#questions)
+
+## Description:
 ${answers.description}
 
-Installation:
+## Installation:
 ${answers.installation}
 
-Usage:
+## Usage:
 ${answers.usage}
 
-How to contribute:
+## How to contribute:
 ${answers.contribution}
 
-How to test:
+## How to test:
 ${answers.testing}
 
-Github link: https://github.com/${answers.githubName}
-Contact info: ${answers.email}
+## Questions:
+
+For any further questions -
+Contact me: ${answers.email}
+Github Profile: https://github.com/${answers.githubName}
+
 ${answers.licence}
 `;
-Table of Contents,  and Questions
+
 inquirer.prompt([
       {
         type: 'input',
