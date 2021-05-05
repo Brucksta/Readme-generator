@@ -23,14 +23,10 @@ ${answers.testing}
 
 Github link: https://github.com/${answers.githubName}
 Contact info: ${answers.email}
+${answers.licence}
 `;
-
+Table of Contents,  and Questions
 inquirer.prompt([
-      {
-        type: 'input',
-        name: 'email',
-        message: 'What is your Email?',
-      },
       {
         type: 'input',
         name: 'title',  
@@ -65,12 +61,17 @@ inquirer.prompt([
         type: 'list',
         name: 'licence',
         message: 'What licence would you like to use?',
-        choices: [{name: 'MIT', value: ''}, {name: 'afl-3.0', value: ''}, {name: 'apache-2.0', value: ''}]
+        choices: [{name: 'MIT', value: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'}, {name: 'BSD 3-Clause', value: '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'}, {name: 'apache-2.0', value: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'}]
       },
       {
         type: 'input',
         name: 'githubName',
         message: 'What is your Github name?',
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'What is your Email?',
       },
     ])
     .then((answers) => {
