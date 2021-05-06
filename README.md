@@ -1,7 +1,7 @@
 ## Readme Generator
 
 ## Tables of content:
-- [Description](#description)s
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [How to Contribute](#how-to-contribute)
