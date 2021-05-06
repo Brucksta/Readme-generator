@@ -16,6 +16,7 @@ const prompt = inquirer.prompt([
         type: 'input',
         name: 'installation',
         message: 'What are the instructions for installing your project?',
+        default: 'npm i',
       },
       {
         type: 'input',
@@ -31,6 +32,7 @@ const prompt = inquirer.prompt([
         type: 'input',
         name: 'testing',
         message: 'How can people test your application?',
+        default: 'npm test',
       },
       {
         type: 'list',
